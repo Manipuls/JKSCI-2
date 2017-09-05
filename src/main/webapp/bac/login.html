@@ -6,7 +6,15 @@
     <title>uimaker信息管理系统</title> 
     <link href="#(ctx)/bac/css/base.css" rel="stylesheet">
     <link href="#(ctx)/bac/css/login.css" rel="stylesheet">
-
+   	<script type="text/javascript" src="#(ctx)/bac/js/jquery-1.8.3.min.js"></script>   
+    
+	<script type="text/javascript">
+	
+	function submitForm(){
+		$("#loginForm").submit();
+	}
+	
+	</script>
 </head> 
 <body class="white">
 	<div class="login-hd">
@@ -25,15 +33,15 @@
 					<div class="lg-box">
 						<div class="lg-label"><h4>用户登录</h4></div>
 						
-						<form>
+						<form id="loginForm" action="login/_login_in">
 							<div class="lg-username input-item clearfix">
 								<i class="iconfont">&#xe60d;</i>
-								<input type="text" placeholder="账号/邮箱">
+								<input type="text" id="userNo" name="userNo" placeholder="账号/邮箱">
 							</div>
 							
 							<div class="lg-password input-item clearfix">
 								<i class="iconfont">&#xe634;</i>
-								<input type="password" placeholder="请输入密码">
+								<input type="password" id="userPwd" name="userPwd" placeholder="请输入密码">
 							</div>
 							
 							<div class="tips clearfix">
@@ -44,8 +52,8 @@
 							  <span>请输入用户名</span>
 							</div>
 							<div class="enter">
-								<a href="javascript:;" class="purchaser" onClick="javascript:window.location='main.html'">登录</a>
-								<a href="javascript:;" class="supplier" onClick="javascript:window.location='main.html'">清空</a>
+								<a href="javascript:;" class="purchaser" onClick="javascript:$('#loginForm').submit()">登录</a>
+								<a href="javascript:;" class="supplier" >清空</a>
 							</div>
 						</form>
 						<div class="line line-y"></div>

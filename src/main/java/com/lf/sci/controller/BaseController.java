@@ -13,7 +13,11 @@ public class BaseController extends Controller {
     	if(returnType.equals(MyConstants.RETURN_TYPE_JSON)){
     		renderJson(new Result(MyConstants.CODE_SUCCESS, MyConstants.DESC_SUCCESS, object));
     	}else if(returnType.equals(MyConstants.RETURN_TYPE_PAGE)){
-    		render((String)object);
+//    		if("login.html".equals((String)object) || "main.html".equals((String)object)){
+//    			redirect((String)object);
+//    		}else{
+    			render((String)object);
+//    		}
     	}
     }
 

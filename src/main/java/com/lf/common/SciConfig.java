@@ -12,8 +12,10 @@ import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.template.Engine;
-import com.lf.common.model._MappingKit;
+import com.lf.sci.controller.bac.LoginController;
+import com.lf.sci.controller.bac.MainController;
 import com.lf.sci.controller.rec.JumpPageController;
+import com.lf.sci.model._MappingKit;
 
 /**
  * 本 demo 仅表达最为粗浅的 jfinal 用法，更为有价值的实用的企业级用法
@@ -59,7 +61,8 @@ public class SciConfig extends JFinalConfig {
 	public void configRoute(Routes me) {
 		//me.add("/", IndexController.class, "/rec");	// 第三个参数为该Controller的视图存放路径
 		me.add("/", JumpPageController.class, "/rec");			// 第三个参数省略时默认与第一个参数值相同，在此即为 "/blog"
-		me.add("/login", com.lf.sci.controller.bac.JumpPageController.class, "/bac");			// 第三个参数省略时默认与第一个参数值相同，在此即为 "/blog"
+		me.add("/login", LoginController.class, "/bac");			// 第三个参数省略时默认与第一个参数值相同，在此即为 "/blog"
+		me.add("/main", MainController.class, "/bac");			// 第三个参数省略时默认与第一个参数值相同，在此即为 "/blog"
 	}
 	
 	public void configEngine(Engine me) {

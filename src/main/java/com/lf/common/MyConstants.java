@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSONObject;
 public class MyConstants {
 	
 	public static JSONObject json = new JSONObject();
-	public static Logger log=Logger.getLogger("[ -SCI- ]");
+	public static Logger log=Logger.getLogger("-SCI-");
 	
 	
 	  // 接口返回状态码

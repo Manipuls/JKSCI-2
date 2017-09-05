@@ -1,4 +1,4 @@
-package com.lf.common.model;
+package com.lf.sci.model;
 
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 
@@ -16,7 +16,9 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 public class _MappingKit {
 
 	public static void mapping(ActiveRecordPlugin arp) {
-		//arp.addMapping("blog", "id", Blog.class);
+		arp.addMapping("_sci_menu", "serial_id", Menu.class);
+		arp.addMapping("_sci_role", "serial_id", Role.class);
+		arp.addMapping("_sci_user", "serial_id", User.class);
 	}
 }
 

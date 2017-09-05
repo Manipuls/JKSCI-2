@@ -1,0 +1,46 @@
+Table: _sci_menu
+----------------+-------------+------+-----+---------+---------
+ Field          | Type        | Null | Key | Default | Remarks 
+----------------+-------------+------+-----+---------+---------
+ serial_id      | VARCHAR(64) | NO   | PRI |         |         
+ menu_no        | VARCHAR(64) | YES  |     |         |         
+ menu_name      | VARCHAR(64) | YES  |     |         |         
+ menu_url       | VARCHAR(64) | YES  |     |         |         
+ menu_parent_no | VARCHAR(64) | YES  |     |         |         
+ create_time    | VARCHAR(64) | YES  |     |         |         
+ update_time    | VARCHAR(64) | YES  |     |         |         
+ is_delete      | VARCHAR(64) | YES  |     | 1       |         
+----------------+-------------+------+-----+---------+---------
+
+Table: _sci_role
+-------------+---------------+------+-----+---------+---------
+ Field       | Type          | Null | Key | Default | Remarks 
+-------------+---------------+------+-----+---------+---------
+ serial_id   | VARCHAR(64)   | NO   | PRI |         |         
+ role_no     | VARCHAR(64)   | YES  |     |         |         
+ role_name   | VARCHAR(64)   | YES  |     |         |         
+ role_rights | VARCHAR(2500) | YES  |     |         |         
+ create_user | VARCHAR(64)   | YES  |     |         |         
+ create_time | VARCHAR(64)   | YES  |     |         |         
+ update_user | VARCHAR(64)   | YES  |     |         |         
+ update_time | VARCHAR(64)   | YES  |     |         |         
+ is_delete   | VARCHAR(1)    | YES  |     | 1       |         
+-------------+---------------+------+-----+---------+---------
+
+Table: _sci_user
+-------------+---------------+------+-----+---------+---------
+ Field       | Type          | Null | Key | Default | Remarks 
+-------------+---------------+------+-----+---------+---------
+ serial_id   | VARCHAR(64)   | NO   | PRI |         |         
+ user_no     | VARCHAR(64)   | YES  |     |         |         
+ user_name   | VARCHAR(64)   | YES  |     |         |         
+ user_pwd    | VARCHAR(64)   | YES  |     |         |         
+ role_no     | VARCHAR(64)   | YES  |     |         |         
+ user_rights | VARCHAR(2500) | YES  |     |         |         
+ create_user | VARCHAR(64)   | YES  |     |         |         
+ create_time | VARCHAR(64)   | YES  |     |         |         
+ update_user | VARCHAR(64)   | YES  |     |         |         
+ update_time | VARCHAR(64)   | YES  |     |         |         
+ is_delete   | VARCHAR(1)    | YES  |     | 1       |         
+-------------+---------------+------+-----+---------+---------
+
